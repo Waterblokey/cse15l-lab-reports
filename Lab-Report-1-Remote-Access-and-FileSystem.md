@@ -6,6 +6,7 @@ CSE 15L
 
 ## Command tests
 **cd**
+<br />
 no arguments: 
 ```
 [user@sahara ~]$ cd

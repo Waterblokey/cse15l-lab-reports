@@ -1,21 +1,23 @@
-## Lab Report 1
+# Lab Report 1
 Ryan Livengood
 10/3/2023
 P
 CSE 15L
 
-# Command tests
+## Command tests
 **cd**
 No arguments: 
 ```
 [user@sahara ~]$ cd
 [user@sahara ~]$ 
 ```
+**cd**
 With path to a directory:
 ```
 [user@sahara ~]$ cd /home/lecture1
 [user@sahara ~/lecture1]$ 
 ```
+**cd**
 With path to a file:
 ```
 [user@sahara ~/lecture1]$ cd /home/lecture1/messages/en-us.txt
@@ -29,16 +31,36 @@ No arguments:
 Hello.class  Hello.java  messages  README
 [user@sahara ~/lecture1]$ 
 ```
+**ls**
 With path to a directory:
 ```
 [user@sahara ~/lecture1]$ ls /home/lecture1
 Hello.class  Hello.java  messages  README
 [user@sahara ~/lecture1]$ 
 ```
+**ls**
 With path to a file:
 ```
 [user@sahara ~/lecture1]$ ls /home/lecture1/messages/en-us.txt
 /home/lecture1/messages/en-us.txt
 [user@sahara ~/lecture1]$ 
 ```
-
+**cat**
+No arguments: 
+```
+[user@sahara ~/lecture1]$ cat
+```
+**cat**
+With path to a directory:
+```
+[user@sahara ~/lecture1]$ cat /home/lecture1
+cat: /home/lecture1: Is a directory
+[user@sahara ~/lecture1]$ 
+```
+**cat**
+With path to a file:
+```
+[user@sahara ~/lecture1]$ cat /home/lecture1/messages/en-us.txt
+Hello World!
+[user@sahara ~/lecture1]$
+```

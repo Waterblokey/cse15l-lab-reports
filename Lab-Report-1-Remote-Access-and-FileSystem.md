@@ -43,6 +43,7 @@ With path to a directory:
 Hello.class  Hello.java  messages  README
 [user@sahara ~/lecture1]$ 
 ```
+This command was run in the lecture1 directory. Since the directory we input is the same as the working directory, it had the same output as our previous call. No error here.
 **ls**
 With path to a file:
 ```
@@ -50,6 +51,7 @@ With path to a file:
 /home/lecture1/messages/en-us.txt
 [user@sahara ~/lecture1]$ 
 ```
+This command was run in lecture1 directorySimilarly to the final call of cd, ls does not work in files because files do not hold directories or other files, therefore there was nothing to list. This resulted in an error where it output what we input.
 **cat**
 No arguments: 
 ```

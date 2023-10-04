@@ -51,12 +51,13 @@ With path to a file:
 /home/lecture1/messages/en-us.txt
 [user@sahara ~/lecture1]$ 
 ```
-This command was run in lecture1 directorySimilarly to the final call of cd, ls does not work in files because files do not hold directories or other files, therefore there was nothing to list. This resulted in an error where it output what we input.
+This command was run in lecture1 directory. Similarly to the final call of cd, ls does not work in files because files do not hold directories or other files, therefore there was nothing to list. This resulted in an error where it output what we input.
 **cat**
 No arguments: 
 ```
 [user@sahara ~/lecture1]$ cat
 ```
+This command was run in the lecture1 directory. The function of cat is to print the data in a file. Since we did not provide a file, nothing was output. This is an error, and as a result nothing was output.
 **cat**
 With path to a directory:
 ```
@@ -64,6 +65,7 @@ With path to a directory:
 cat: /home/lecture1: Is a directory
 [user@sahara ~/lecture1]$ 
 ```
+This command was run in the lecture1 directory. Since we did not provide a file, but rather a directory, cat ran into an error. It handled the error by correctly outputting that we provided a directory instead of a file.
 **cat**
 With path to a file:
 ```
@@ -71,3 +73,5 @@ With path to a file:
 Hello World!
 [user@sahara ~/lecture1]$
 ```
+This command was run in the lecture1 directory. We provided the file en-us.txt, and cat output the contents of that text file. Since we used the command correctly. there was no error.
+

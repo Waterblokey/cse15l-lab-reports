@@ -27,7 +27,7 @@ with path to a file:
 bash: cd: /home/lecture1/messages/en-us.txt: Not a directory
 [user@sahara ~/lecture1]$ 
 ```
-This command was run in the home directory. I got this output because there was an error. en-us.txt is not a directory, so cd was unable to change to it. This resulted in it printing the input back out, and keeping the working directory the same.
+This command was run in the lecture1 directory. I got this output because there was an error. en-us.txt is not a directory, so cd was unable to change to it. This resulted in it printing the input back out, and keeping the working directory the same.
 **ls**
 No arguments: 
 ```
@@ -35,6 +35,7 @@ No arguments:
 Hello.class  Hello.java  messages  README
 [user@sahara ~/lecture1]$ 
 ```
+This command was run in the lecture1 directory. It output a list of all the files and directories in lecture1, because the function of ls is to list all these things for the working directory. There was no error here.
 **ls**
 With path to a directory:
 ```

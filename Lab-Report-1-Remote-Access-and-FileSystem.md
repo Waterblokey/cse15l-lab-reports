@@ -1,7 +1,7 @@
 # Lab Report 1
 Ryan Livengood
 10/3/2023
-P
+Joe Gibbs Politz
 CSE 15L
 
 ## Command tests

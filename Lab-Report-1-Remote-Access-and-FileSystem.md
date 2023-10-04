@@ -19,6 +19,7 @@ with path to a directory:
 [user@sahara ~]$ cd /home/lecture1
 [user@sahara ~/lecture1]$ 
 ```
+This command was run in the home directory. I got this output because cd does not print anything, it changes the working directory. Although it did not print anything, the path has changed, where /lecture1 was appended to the end. This means that the working directory is now lecture1. No error occurred.
 **cd**
 with path to a file:
 ```

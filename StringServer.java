@@ -10,7 +10,7 @@ class Handler implements URLHandler {
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
             return String.format(str);
-        }/* else {
+        } else {
             if (url.getPath().contains("/add-message")) {
                 String[] parameters = url.getQuery().split("=");
                 if (parameters[0].equals("s")) {
@@ -19,7 +19,6 @@ class Handler implements URLHandler {
                     return String.format(str);
                 }
             }
-            */
             return "404 Not Found!";
         }
     }

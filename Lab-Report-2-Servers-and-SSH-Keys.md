@@ -7,6 +7,7 @@ CSE 15L
 ## Part 1 - Implementing StringServer
 <img width="288" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/a3ad778e-989d-48ef-93aa-c5a796af546d">
 In this example, the handleRequest method and the main method are called. Main has a String parameter called args which is meant to take the port number, while handleRequest has a URI parameter called url which takes the URL up to the beginning of the path. In the screenshot provided, the value of main's parameter is 7127, since that is the port number, while the value of handleRequest's parameter is localhost:. From this specific request, /add-message?s=Hello, str, count, strCount and url are changed.
+
 ```
 import java.io.IOException;
 import java.net.URI;

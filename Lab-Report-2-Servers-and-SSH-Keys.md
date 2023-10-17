@@ -1,4 +1,4 @@
-#Lab Report 1
+# Lab Report 1
 Ryan Livengood
 Joe Politz
 10/17/2023

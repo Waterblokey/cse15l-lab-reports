@@ -17,7 +17,8 @@ class Handler implements URLHandler {
                 if (parameters[0].equals("s")) {
                     count += 1;
                     strCount = Integer.toString(count);
-                    str += "\n %s. %d", strCount, parameters[1];
+                    str += "\n" + strCount + parameters[1];
+//                    str += "\n %s. %d", strCount, parameters[1];
                     return String.format(str);
                 }
             }

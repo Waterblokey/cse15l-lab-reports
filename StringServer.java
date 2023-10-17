@@ -6,6 +6,7 @@ class Handler implements URLHandler {
     // various requests.
     String str = "";
     int count = 0;
+    String strCount = "";
 
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
@@ -15,7 +16,8 @@ class Handler implements URLHandler {
                 String[] parameters = url.getQuery().split("=");
                 if (parameters[0].equals("s")) {
                     count += 1;
-                    str = str.concat("\n %s. %d", count, parameters[1]);
+                    strCount = Integer.toString(count);
+                    str = str.concat("\n %s. %d", strCount, parameters[1]);
                     return String.format(str);
                 }
             }

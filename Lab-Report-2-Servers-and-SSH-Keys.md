@@ -23,9 +23,10 @@ CSE 15L
 <br />
 - Once again, the relevant arguments are args and url, while the relevant values are str, count and strCount. args remains 7127.
 <br />
-- url changes from localhost:7127/add-message?s=Hello to localhost:7127/add-message?s=How are you?. str changes from \nHello to \nHello\nHow are you?. count changes from 1 to 2, and strCount changes from "1" to "2"
+- url changes from localhost:7127/add-message?s=Hello to localhost:7127/add-message?s=How are you?. str changes from "Hello" to "Hello\nHow are you?". count changes from 1 to 2, and strCount changes from "1" to "2"
 <br />
 
+**Code for StringServer.java**
 ```
 import java.io.IOException;
 import java.net.URI;
@@ -68,3 +69,6 @@ class StringServer {
     }
 }
 ```
+
+## Part 2 
+

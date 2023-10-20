@@ -47,7 +47,7 @@ class Handler implements URLHandler {
                 if (parameters[0].equals("s")) {
                     count += 1;
                     strCount = Integer.toString(count);
-                    str += strCount + ". " + parameters[1] + "\n";;pppppppppppp
+                    str += strCount + ". " + parameters[1] + "\n";
                     return String.format(str);
                 }
             }
@@ -88,6 +88,8 @@ Path to public key for SSH key
 <br />
 <img width="179" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/9603c404-3ba3-4b69-9496-db47d7f5f3c2">
 
-
+<br />
+## Part 3
+One thing I learned from week 2 was how to remotely connect to a server. To do this from the terminal, you must use the ssh command, then enter the account you would like to connect to. It will then prompt you for your password, after which it will tell you when previous users were on this server.
 
 

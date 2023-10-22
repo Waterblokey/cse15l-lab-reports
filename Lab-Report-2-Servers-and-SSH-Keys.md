@@ -76,6 +76,7 @@ class StringServer {
 Logging into ieng6 without being asked for password
 <br />
 <img width="361" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/95decbd1-f878-47b6-9f03-2f25c7e5a584">
+<img width="220" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/cd736c27-1d73-4c61-b89c-76cf66159284">
 
 <br />
 Path to private key for SSH key

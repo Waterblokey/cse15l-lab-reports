@@ -1,79 +1,93 @@
-# Lab Report 1
+# Lab Report 2
 Ryan Livengood
-10/3/2023
-Joe Gibbs Politz
+Joe Politz
+10/17/2023
 CSE 15L
 
-## Command tests
-**cd**
-<br />
-**no arguments:** 
-```
-[user@sahara ~]$ cd
-[user@sahara ~]$ 
-```
-This command was run in the home directory. I got this output because cd does not print anything, it changes the working directory. This output is an error because no directory was provided, meaning there was no directory to change to.
-<br />
-**with path to a directory:**
-```
-[user@sahara ~]$ cd /home/lecture1
-[user@sahara ~/lecture1]$ 
-```
-This command was run in the home directory. I got this output because cd does not print anything, it changes the working directory. Although it did not print anything, the path has changed, where /lecture1 was appended to the end. This means that the working directory is now lecture1. No error occurred.
-<br />
-**with path to a file:**
-```
-[user@sahara ~/lecture1]$ cd /home/lecture1/messages/en-us.txt
-bash: cd: /home/lecture1/messages/en-us.txt: Not a directory
-[user@sahara ~/lecture1]$ 
-```
-This command was run in the lecture1 directory. I got this output because there was an error. en-us.txt is not a directory, so cd was unable to change to it. This resulted in it printing the input back out, and keeping the working directory the same.
-<br />
-**ls**
-**No arguments:** 
-```
-[user@sahara ~/lecture1]$ ls
-Hello.class  Hello.java  messages  README
-[user@sahara ~/lecture1]$ 
-```
-This command was run in the lecture1 directory. It output a list of all the files and directories in lecture1, because the function of ls is to list all these things for the working directory. There was no error here.
-<br />
-**With path to a directory:**
-```
-[user@sahara ~/lecture1]$ ls /home/lecture1
-Hello.class  Hello.java  messages  README
-[user@sahara ~/lecture1]$ 
-```
-This command was run in the lecture1 directory. Since the directory we input is the same as the working directory, it had the same output as our previous call. No error here.
-<br />
-**With path to a file:**
-```
-[user@sahara ~/lecture1]$ ls /home/lecture1/messages/en-us.txt
-/home/lecture1/messages/en-us.txt
-[user@sahara ~/lecture1]$ 
-```
-This command was run in lecture1 directory. Similarly to the final call of cd, ls does not work in files because files do not hold directories or other files, therefore there was nothing to list. This resulted in an error where it output what we input.
-<br />
-**cat**
-**No arguments:** 
-```
-[user@sahara ~/lecture1]$ cat
-```
-This command was run in the lecture1 directory. The function of cat is to print the data in a file. Since we did not provide a file, nothing was output. This is an error, and as a result nothing was output.
-<br />
-**With path to a directory:**
-```
-[user@sahara ~/lecture1]$ cat /home/lecture1
-cat: /home/lecture1: Is a directory
-[user@sahara ~/lecture1]$ 
-```
-This command was run in the lecture1 directory. Since we did not provide a file, but rather a directory, cat ran into an error. It handled the error by correctly outputting that we provided a directory instead of a file.
-<br />
-**With path to a file:**
-```
-[user@sahara ~/lecture1]$ cat /home/lecture1/messages/en-us.txt
-Hello World!
-[user@sahara ~/lecture1]$
-```
-This command was run in the lecture1 directory. We provided the file en-us.txt, and cat output the contents of that text file. Since we used the command correctly. there was no error.
 
+## Part 1 - Implementing StringServer
+<img width="288" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/a3ad778e-989d-48ef-93aa-c5a796af546d">
+<br />
+- In this example, the handleRequest method and the main method are called.
+<br />
+- Main has a String parameter called args which is meant to take the port number, while handleRequest has a URI parameter called url which takes the URL up to the beginning of the path. In the screenshot provided, the value of main's parameter is 7127, since that is the port number, while the value of handleRequest's parameter is localhost:. There are also relevant values, including str, count, and strCount. str and strCount are initialized as "", while count is initialized to 0.
+<br />
+- From this specific request, /add-message?s=Hello, str, count, strCount and url are changed. str is changed from "" to "Hello", count is changed from 0 to 1, strCount is changed from "" to "1", and url is changed to localhost:7127/add-message?s=Hello.
+<br />
+<br />
+
+
+<img width="359" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/21d40cc2-72dc-45fb-8054-89d799418ada">
+<br />
+- In This example, the handleRequest and main method are called again. 
+<br />
+- Once again, the relevant arguments are args and url, while the relevant values are str, count and strCount. args remains 7127.
+<br />
+- url changes from localhost:7127/add-message?s=Hello to localhost:7127/add-message?s=How are you?. str changes from "Hello" to "Hello\nHow are you?". count changes from 1 to 2, and strCount changes from "1" to "2"
+<br />
+
+**Code for StringServer.java**
+```
+import java.io.IOException;
+import java.net.URI;
+
+class Handler implements URLHandler {
+    // The one bit of state on the server: a number that will be manipulated by
+    // various requests.
+    String str = "";
+    int count = 0;
+    String strCount = "";
+
+    public String handleRequest(URI url) {
+        if (url.getPath().equals("/")) {
+            return String.format(str);
+        } else {
+            if (url.getPath().contains("/add-message")) {
+                String[] parameters = url.getQuery().split("=");
+                if (parameters[0].equals("s")) {
+                    count += 1;
+                    strCount = Integer.toString(count);
+                    str += strCount + ". " + parameters[1] + "\n";
+                    return String.format(str);
+                }
+            }
+            return "404 Not Found!";
+        }
+    }
+}
+
+class StringServer {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
+        }
+
+        int port = Integer.parseInt(args[0]);
+
+        Server.start(port, new Handler());
+    }
+}
+```
+
+## Part 2 
+<br />
+
+Logging into ieng6 without being asked for password
+<br />
+<img width="361" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/95decbd1-f878-47b6-9f03-2f25c7e5a584">
+<img width="220" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/cd736c27-1d73-4c61-b89c-76cf66159284">
+
+<br />
+Path to private key for SSH key
+<br />
+
+<img width="211" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/53c5056c-2458-414d-86ca-4ac6b3eaa01b">
+
+Path to public key for SSH key
+
+<img width="179" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/9603c404-3ba3-4b69-9496-db47d7f5f3c2">
+
+
+## Part 3
+One thing I learned from week 2 was how to remotely connect to a server. To do this from the terminal, you must use the ssh command, then enter the account you would like to connect to. It will then prompt you for your password, after which it will tell you when previous users were on this server.

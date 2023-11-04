@@ -87,7 +87,8 @@ Path to private key for SSH key
 
 Path to public key for SSH key
 
-<img width="179" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/9603c404-3ba3-4b69-9496-db47d7f5f3c2">
+<img width="274" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/d359672f-dbdd-48d0-8bf9-e2a8624bb908">
+
 
 
 ## Part 3

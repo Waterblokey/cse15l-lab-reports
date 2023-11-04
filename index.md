@@ -60,7 +60,7 @@ Then I did `grep "Given" technical/biomed/gb-2002-3-12-research0086.txt` which o
 
 This command recursively searches through a directory for any instance of the given pattern. 
 <br />
-First, I looked for any pattern "phospholipid" in the biomed directory.
+First, I looked for any pattern "phospholipid" in the biomed directory. This is useful to find all instances of "phospholipid."
 `grep -r "phospholipid" ~/cse15l-lab-reports/lab-5/docsearch/technical/biomed/`
 here is the output
 ```
@@ -192,8 +192,101 @@ here is the output
 /c/Users/Ryan Livengood/cse15l-lab-reports/lab-5/docsearch/technical/biomed/gb-2003-4-2-r8.txt:        metabolism, and phospholipid signaling pathways are
 /c/Users/Ryan Livengood/cse15l-lab-reports/lab-5/docsearch/technical/biomed/rr191.txt:        Surfactant, a lipoprotein comprised of phospholipids
 ```
-I also did a more targeted search, looking for arachidonate
+I also did a more targeted search, looking for arachidonate. This is useful for finding rare words since you search several files.
 `grep -r arachidonate ~/cse15l-lab-reports/lab-5/docsearch/technical/biomed/`
 ```
 /c/Users/Ryan Livengood/cse15l-lab-reports/lab-5/docsearch/technical/biomed/1471-2091-3-30.txt:        sn-2 arachidonate from phospholipid
+```
+
+## grep -E
+
+In this example, I also used -v and |. -v will only display lines that do not contain the given pattern. -E will allow for extended reular expressions, meaning multiple patterns are allowed. This in conjunction with the and operator, |, allowed me to only display lines that did not have many common words. This is useful if you want to get rid of many words, and only look at very specific patterns.
+
+```
+grep -v -E "and|or|is|for|has|of|at|to" technical/biomed/1471-2490-3-2.txt
+
+
+
+
+        Background
+        in their course, which may be helpful in decreasing the
+        flank pain.
+
+
+        Methods
+        renal/ureteral colic were reviewed. The UHCT were obtained
+        on a Cti/pro single slice helical CT scanner (General
+        Electrical medical systems, Milwaukee, WI). The exposure
+
+
+        Results
+        diagnoses.
+
+
+        ureteral/renal colic [ 9 10 11 12 13 ] . Apart from its
+        Medical Center, Philadelphia, Marcella et al [ 8 ] noted an
+        pain.
+
+
+        Conclusion
+        suspected renal/ureteric colic. In the present series, such
+
+
+        Competing interests
+        None declared.
+
+
+        writing
+```
+
+And another example using -E by itself to search for either DNA or fluorescent. This is useful for finding multiple patterns that you're interested in.
+
+```
+grep -E "DNA|fluorescent" ~/cse15l-lab-reports//lab-5/docsearch/technical/biomed/1471-2350-2-11.txt
+        over 235 kb of genomic DNA in chromosome band 15q21.1
+          Genomic DNA and total RNA were extracted from
+          FBN1 cDNA fragments and restriction enzyme digestions
+          (QIAGEN) and directly sequenced with fluorescent
+          terminators on an ABI Prism 377 DNA sequencer
+          amplified genomic DNA with the ExpandTM PCR System
+        samples had previously been screened with a cDNA
+        amplification/SSCA protocol [ 14 ] and a genomic DNA/exon
+        amplicons (Fig. 1a). Sequence analysis of the altered cDNA
+        exons and their splice sites individually from genomic DNA
+        for amplification of genomic DNA. Long-range PCR analysis
+        gene is completely screened with a DNA-based PCR
+        Bgl II digested genomic DNA from 18
+        generated from a normal cDNA template as described above.
+        genomic DNA are much more laborious and more difficult to
+        DNA level with the list of phenotypic features, we feel
+```
+
+## grep -l
+This option will only list the files that contain the given pattern.
+One example of me using it is to search for a specific term in all of the `biomed` folder. This is useful to find a very rare word in a group of files.
+
+```
+grep -l "Multi-exon"  ~/cse15l-lab-reports//lab-5/docsearch/technical/biomed/*
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/1471-2350-2-11.txt
+```
+
+Another example is me using it to find a more general word in the biomed directory. This is useful because you may not want every line displayed, but only to know the files the pattern is in. This is especially helpeful for big directories like the biomed directory.
+
+```
+grep -l "phospholipids"  ~/cse15l-lab-reports//lab-5/docsearch/technical/biomed/*
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/1471-2091-3-30.txt
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/1471-2091-3-31.txt
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/1471-2105-4-24.txt
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/1471-2121-3-16.txt
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/1471-2121-3-19.txt
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/1471-2148-2-12.txt
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/1471-2172-3-16.txt
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/1471-2202-2-16.txt
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/1471-2202-4-16.txt
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/1476-4598-1-6.txt
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/1476-511X-2-2.txt
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/ar319.txt
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/gb-2001-2-12-research0051.txt
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/gb-2001-2-12-research0054.txt
+/c/Users/Ryan Livengood/cse15l-lab-reports//lab-5/docsearch/technical/biomed/rr191.txt
 ```

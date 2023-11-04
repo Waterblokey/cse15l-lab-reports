@@ -4,7 +4,9 @@ ArrayExamples.java `reversed` method
 Failure Inducing input: {1, 2}
 non-failure inducing input: {0, 0}
 Symptom as shown by tests:
-Buggy code:
+Buggy Symptoms: 
+
+Buggy Code
 ```
 static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];

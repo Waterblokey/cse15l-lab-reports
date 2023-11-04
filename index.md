@@ -1,9 +1,12 @@
 # Part 1 - Bugs
 ArrayExamples.java `reversed` method
-
+<br />
 Failure Inducing input: {1, 2}
+<br />
 non-failure inducing input: {0, 0}
+<br />
 Symptom as shown by tests:
+<br />
 Buggy Symptoms: 
 ![image](https://media.discordapp.net/attachments/1145551780747419648/1170243820923920434/image.png?ex=6558557c&is=6545e07c&hm=97058437c8d4f0be8288e92b78cf2d7309df1e0ff7a01b40dc4599e461b4bc5e&=&width=1060&height=598)
 Buggy Code

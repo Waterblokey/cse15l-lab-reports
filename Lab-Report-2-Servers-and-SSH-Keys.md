@@ -82,7 +82,8 @@ Logging into ieng6 without being asked for password
 Path to private key for SSH key
 <br />
 
-<img width="211" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/53c5056c-2458-414d-86ca-4ac6b3eaa01b">
+<img width="212" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/76f1cba3-b7f7-44ec-89ed-3dd97446ddec">
+
 
 Path to public key for SSH key
 

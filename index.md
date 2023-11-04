@@ -184,4 +184,8 @@ here is the output
 /c/Users/Ryan Livengood/cse15l-lab-reports/lab-5/docsearch/technical/biomed/gb-2003-4-2-r8.txt:        metabolism, and phospholipid signaling pathways are
 /c/Users/Ryan Livengood/cse15l-lab-reports/lab-5/docsearch/technical/biomed/rr191.txt:        Surfactant, a lipoprotein comprised of phospholipids
 ```
-
+I also did a more targeted search, looking for arachidonate
+`grep -r arachidonate ~/cse15l-lab-reports/lab-5/docsearch/technical/biomed/`
+```
+/c/Users/Ryan Livengood/cse15l-lab-reports/lab-5/docsearch/technical/biomed/1471-2091-3-30.txt:        sn-2 arachidonate from phospholipid
+```

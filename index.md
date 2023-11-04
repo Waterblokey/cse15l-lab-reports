@@ -42,6 +42,7 @@ Fixed code:
 Explanation of Fix:
 <br />
 The 'reversed' method was not working because it set the given `array`'s elements to the elements of a newly initialized array, `newArray`, which has all values equal to 0. This can be fixed by making the values in `newArray` equal `array` array, because this will keep the values in the given array, but reverse them, instead of overwriting them as 0.
+<br />
 # Part 2 - Researching Commands
 
 ## grep -i command line option with grep. 

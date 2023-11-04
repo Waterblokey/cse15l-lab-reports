@@ -51,6 +51,8 @@ The command I chose is grep, and the command line options I will show are -i, -r
 
 ## grep -i command line option with grep. 
 
+Total: 3 examples
+<br />
 First, I did ` grep "given" technical/biomed/gb-2002-3-12-research0086.txt` which only printed versions that had given with a lowercase g. 
 Then I did `grep "Given" technical/biomed/gb-2002-3-12-research0086.txt` which only printed versions with an uppercase "G". Finally, using the -i option, a case-insensitive search is conducted, meaning both lowercase and uppercase "G" cases are printed. Here, I did ` grep -i "Given" technical/biomed/gb-2002-3-12-research0086.txt`
 <br />

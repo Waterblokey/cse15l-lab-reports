@@ -43,8 +43,9 @@ Explanation of Fix:
 <br />
 The 'reversed' method was not working because it set the given `array`'s elements to the elements of a newly initialized array, `newArray`, which has all values equal to 0. This can be fixed by making the values in `newArray` equal `array` array, because this will keep the values in the given array, but reverse them, instead of overwriting them as 0.
 <br />
-# Part 2 - Researching Commands
 
+# Part 2 - Researching Commands
+<br />
 ## grep -i command line option with grep. 
 First, I did ` grep "given" technical/biomed/gb-2002-3-12-research0086.txt` which only printed versions that had given with a lowercase g. 
 Then I did `grep "Given" technical/biomed/gb-2002-3-12-research0086.txt` which only printed versions with an uppercase "G". Finally, using the -i option, a case-insensitive search is conducted, meaning both lowercase and uppercase "G" cases are printed. Here, I did ` grep -i "Given" technical/biomed/gb-2002-3-12-research0086.txt`

@@ -4,8 +4,30 @@ ArrayExamples.java `reversed` method
 <br />
 Failure Inducing input: {1, 2}
 <br />
+Asociated code:
+
+```
+  @Test
+  public void ryantestReversed() {
+    int[] input1 = { 1, 2 };
+    assertArrayEquals(new int[]{ 2, 1 }, ArrayExamples.reversed(input1));
+  }
+```
+
+<br />
 <br />
 non-failure inducing input: {0, 0}
+<br />
+Associated test code:
+
+```
+  @Test
+  public void ryantestReversed() {
+    int[] input1 = { 0, 0 };
+    assertArrayEquals(new int[]{ 0, 0 }, ArrayExamples.reversed(input1));
+  }
+```
+
 <br />
 <br />
 Symptom as shown by tests:

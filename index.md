@@ -317,7 +317,10 @@ Another line with more information.
 The `-E` option enables extended regular expressions, and the `|` operator specifies the "or" condition, so `grep` will match lines that contain either "sample" or "information."
 <br />
 You can extend the list of patterns separated by `|` to include more search criteria, and `grep` will produce lines that match any of those patterns.
-
+<br />
+<br />
+<br />
+I used ChatGPT's example `"sample|information"` , and extended it to `"and|or|is|for|has|of|at|to"`
 
 ```
 grep -v -E "and|or|is|for|has|of|at|to" technical/biomed/1471-2490-3-2.txt

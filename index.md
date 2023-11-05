@@ -141,7 +141,9 @@ Then I did `grep "Given" technical/biomed/gb-2002-3-12-research0086.txt` which o
 
 This command recursively searches through a directory for any instance of the given pattern. 
 <br />
+<br />
 I found out about this option from the first ChatGPT prompt I put in this lab report
+<br />
 <br />
 First, I looked for any pattern "phospholipid" in the biomed directory. This is useful to find all instances of "phospholipid."
 `grep -r "phospholipid" ~/cse15l-lab-reports/lab-5/docsearch/technical/biomed/`

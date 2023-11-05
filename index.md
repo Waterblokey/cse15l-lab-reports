@@ -85,27 +85,26 @@ I found out about this option by prompting chatGPT with "What are 5 command-line
 ChatGPT gave the following output:
 <br />
 <br />
-grep is a powerful command-line tool for searching text using regular expressions. Here are five common command-line options you can use with grep:
-<br />
--i (or --ignore-case): This option makes grep perform a case-insensitive search, so it will match lines regardless of whether the characters are uppercase or lowercase. For example, grep -i "example" will match "Example," "EXAMPLE," and "example."
-<br />
--r (or --recursive): Use this option to search for text recursively in directories and subdirectories. It's helpful when you want to search for a pattern in multiple files within a directory tree. For example, grep -r "pattern" /path/to/directory will search for "pattern" in all files under the specified directory.
-<br />
--v (or --invert-match): This option inverts the match, which means it will only display lines that do not contain the specified pattern. For example, grep -v "exclude" will show lines that do not contain "exclude."
-<br />
--l (or --files-with-matches): When you only want to see a list of filenames that contain the matching pattern, you can use this option. For example, grep -l "pattern" /path/to/files/* will list the filenames that contain "pattern."
-<br />
--A, -B, and -C (or --after-context, --before-context, and --context): These options allow you to display lines of context around the matching lines. -A shows lines after the match, -B shows lines before the match, and -C shows lines both before and after the match. You can specify the number of lines to display as context. For example, grep -A 2 -B 2 "pattern" file.txt will display the lines containing "pattern" and two lines before and two lines after.
-<br />
-These are just a few of the many options available in grep to help you customize your text searches. You can access the full list of options and more details in the grep manual by running man grep in your terminal.
+>grep is a powerful command-line tool for searching text using regular expressions. Here are five common command-line >options you can use with grep:
+>
+>-i (or --ignore-case): This option makes grep perform a case-insensitive search, so it will match lines regardless of >whether the characters are uppercase or lowercase. For example, grep -i "example" will match "Example," "EXAMPLE," and >"example."
+>
+>-r (or --recursive): Use this option to search for text recursively in directories and subdirectories. It's helpful when >you want to search for a pattern in multiple files within a directory tree. For example, grep -r "pattern" >/path/to/directory will search for "pattern" in all files under the specified directory.
+>
+>-v (or --invert-match): This option inverts the match, which means it will only display lines that do not contain the >specified pattern. For example, grep -v "exclude" will show lines that do not contain "exclude."
+>
+>-l (or --files-with-matches): When you only want to see a list of filenames that contain the matching pattern, you can use >this option. For example, grep -l "pattern" /path/to/files/* will list the filenames that contain "pattern."
+>
+>-A, -B, and -C (or --after-context, --before-context, and --context): These options allow you to display lines of context >around the matching lines. -A shows lines after the match, -B shows lines before the match, and -C shows lines both before >and after the match. You can specify the number of lines to display as context. For example, grep -A 2 -B 2 "pattern" >file.txt will display the lines containing "pattern" and two lines before and two lines after.
+>
+>These are just a few of the many options available in grep to help you customize your text searches. You can access the >full list of options and more details in the grep manual by running man grep in your terminal.
 <br />
 <br />
 I then asked could you give an example using -i ? And ChatGPT output:
-<br />
-<br />
-Certainly! The `-i` option in `grep` is used to perform a case-insensitive search. Here's an example of how to use it:
-<br />
-Let's say you have a file called `sample.txt` with the following content:
+
+>Certainly! The `-i` option in `grep` is used to perform a case-insensitive search. Here's an example of how to use it:
+>
+>Let's say you have a file called `sample.txt` with the following content:
 
 ```
 This is a sample text file.
@@ -114,13 +113,13 @@ Another example is here.
 CASE-INSENSITIVE search is useful.
 ```
 
-If you want to search for the word "example" in a case-insensitive manner, you can use the `-i` option as follows:
+>If you want to search for the word "example" in a case-insensitive manner, you can use the `-i` option as follows:
 
 ```bash
 grep -i "example" sample.txt
 ```
 
-The `-i` option tells `grep` to ignore the case, so it will match lines with "example," "EXAMPLE," and "Example." Running the command will produce the following output:
+>The `-i` option tells `grep` to ignore the case, so it will match lines with "example," "EXAMPLE," and "Example." Running >the command will produce the following output:
 
 ```
 Here's an EXAMPLE line.
@@ -128,10 +127,9 @@ Another example is here.
 CASE-INSENSITIVE search is useful.
 ```
 
-As you can see, all lines containing variations of "example" were matched, regardless of their case.
-<br />
-<br />
-I changed ChatGPT's suggestions to fit the file structure we were working with. First, I did ` grep "given" technical/biomed/gb-2002-3-12-research0086.txt` which only printed versions that had given with a lowercase g. 
+>As you can see, all lines containing variations of "example" were matched, regardless of their case.
+
+I changed ChatGPT's suggestions to fit the file structure we were working with. First, I did `grep "given" technical/biomed/gb-2002-3-12-research0086.txt` which only printed versions that had given with a lowercase g. 
 
 Then I did `grep "Given" technical/biomed/gb-2002-3-12-research0086.txt` which only printed versions with an uppercase "G".
 <br />
@@ -287,16 +285,15 @@ I also did a more targeted search, looking for arachidonate. This is useful for 
 
 ## grep -E
 
-In this example, I also used -v and |. -v will only display lines that do not contain the given pattern. -E will allow for extended reular expressions, meaning multiple patterns are allowed. This in conjunction with the and operator, |, allowed me to only display lines that did not have many common words. This is useful if you want to get rid of many words, and only look at very specific patterns.
+In this example, I also used -v and |. -v will only display lines that do not contain the given pattern. -E will allow for extended reular expressions, meaning multiple patterns are allowed. This in conjunction OR the and operator, |, allowed me to only display lines that did not have many common words. This is useful if you want to get rid of many words, and only look at very specific patterns.
 <br />
 I found out about -E from asking chatGPT: can you list multiple patterns that you would like grep to produce? Which prompted:
-<br />
-<br />
-Yes, you can list multiple patterns that you would like `grep` to produce by using the OR (`|`) operator in conjunction with `-E` option (for extended regular expressions). This allows you to specify multiple patterns and matches lines that contain any of those patterns. 
-<br />
-Here's an example:
-<br />
-Let's say you have a file called `data.txt` with the following content:
+
+>Yes, you can list multiple patterns that you would like `grep` to produce by using the OR (`|`) operator in conjunction >with `-E` option (for extended regular expressions). This allows you to specify multiple patterns and matches lines that >contain any of those patterns. 
+>
+>Here's an example:
+>
+>Let's say you have a file called `data.txt` with the following content:
 
 ```
 This is a sample text file.
@@ -305,25 +302,23 @@ Another line with more information.
 Searching for specific patterns.
 ```
 
-Suppose you want to search for lines that contain either "sample" or "information." You can use `grep` with the `-E` option and the `|` operator like this:
+>Suppose you want to search for lines that contain either "sample" or "information." You can use `grep` with the `-E` >option and the `|` operator like this:
 
 ```bash
 grep -E "sample|information" data.txt
 ```
 
-Running this command will produce the following output:
+>Running this command will produce the following output:
 
 ```
 This is a sample text file.
 Another line with more information.
 ```
 
-The `-E` option enables extended regular expressions, and the `|` operator specifies the "or" condition, so `grep` will match lines that contain either "sample" or "information."
-<br />
-You can extend the list of patterns separated by `|` to include more search criteria, and `grep` will produce lines that match any of those patterns.
-<br />
-<br />
-<br />
+>The `-E` option enables extended regular expressions, and the `|` operator specifies the "or" condition, so `grep` will >match lines that contain either "sample" or "information."
+>
+>You can extend the list of patterns separated by `|` to include more search criteria, and `grep` will produce lines that >match any of those patterns.
+
 I used ChatGPT's example `"sample|information"` , and extended it to `"and|or|is|for|has|of|at|to"`
 
 ```

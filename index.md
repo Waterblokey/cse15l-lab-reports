@@ -384,6 +384,8 @@ grep -E "DNA|fluorescent" ~/cse15l-lab-reports//lab-5/docsearch/technical/biomed
 ## grep -l
 This option will only list the files that contain the given pattern.
 One example of me using it is to search for a specific term in all of the `biomed` folder. This is useful to find a very rare word in a group of files.
+<br />
+I found out about this command option from the first ChatGPT prompt in this lab report.
 
 ```
 grep -l "Multi-exon"  ~/cse15l-lab-reports//lab-5/docsearch/technical/biomed/*

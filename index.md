@@ -133,7 +133,9 @@ As you can see, all lines containing variations of "example" were matched, regar
 <br />
 I changed ChatGPT's suggestions to fit the file structure we were working with. First, I did ` grep "given" technical/biomed/gb-2002-3-12-research0086.txt` which only printed versions that had given with a lowercase g. 
 
-Then I did `grep "Given" technical/biomed/gb-2002-3-12-research0086.txt` which only printed versions with an uppercase "G". Finally, using the -i option, a case-insensitive search is conducted, meaning both lowercase and uppercase "G" cases are printed. Here, I did ` grep -i "Given" technical/biomed/gb-2002-3-12-research0086.txt`
+Then I did `grep "Given" technical/biomed/gb-2002-3-12-research0086.txt` which only printed versions with an uppercase "G".
+<br />
+Finally, using the -i option, a case-insensitive search is conducted, meaning both lowercase and uppercase "G" cases are printed. Here, I did ` grep -i "Given" technical/biomed/gb-2002-3-12-research0086.txt`
 <br />
 <img width="405" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/d47857fc-3e74-41b0-86c0-de7916be6e74">
 

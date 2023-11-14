@@ -1,6 +1,6 @@
 # Lab 4
 
-Steps
+## Steps
 4. Log into ieng6
 
 <img width="303" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/d9da77e2-e03c-4630-9dd1-715f4c37ea29">

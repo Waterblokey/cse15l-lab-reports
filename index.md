@@ -9,17 +9,19 @@
 
 5. Clone your fork of the repository from your Github account (using the SSH URL)
 <img width="286" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/c1a60b90-4341-4c2b-b16d-3bba43654544">
+
 `git clone git@github.com:Waterblokey/lab7.git` was the first command that came up when searching for g, so I only needed to do `<ctrl> r g <enter>`
 
 
 6. Run the tests, demonstrating that they fail
 <img width="221" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/d3416c20-8e09-4aa8-af7a-88ce14a79ad6">
+
 `c d <space> l <tab> <enter> b a s h t <tab> <enter>` By pressing tab, I could automatically complete all of `lab7/` and `test.sh`
 
 7. Edit the code file to fix the failing test
 <img width="254" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/d9ed0f65-253b-4aed-82d6-9abe8fafd495">
 
-`vim <shift> L <tab> . <tab> 43 j e r 2 <shift> : w q <enter>` By doing `<shift> L`, I could auto fill `ListExamples` with tab, then by pressing `.` and `<tab>` again, I could add `.java`. `43 j` jumps down 43 lines to line 44, then `e` will go to the end of the first word, which was `index1`, `r` replaces that character, and `2` changes it from 1 to 2. I then did `<shift> : w q <enter>` to save my edits and exit.
+`vim <space> <shift> L <tab> . <tab> <enter> 43 j e r 2 <shift> : w q <enter>` By doing `<shift> L`, I could auto fill `ListExamples` with tab, then by pressing `.` and `<tab>` again, I could add `.java`. `43 j` jumps down 43 lines to line 44, then `e` will go to the end of the first word, which was `index1`, `r` replaces that character, and `2` changes it from 1 to 2. I then did `<shift> : w q <enter>` to save my edits and exit.
 
 8. Run the tests, demonstrating that they now succeed
 <img width="217" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/081aa626-e063-479e-9d63-287622eb9e7c">

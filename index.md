@@ -13,6 +13,8 @@
 `git clone git@github.com:Waterblokey/lab7.git` was the first command that came up when searching for g, so I only needed to do `<ctrl> r g <enter>`
 
 
+<img width="454" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/2ad8111a-ad1e-49d1-8803-0b38705932fc">
+
 6. Run the tests, demonstrating that they fail
 <img width="221" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/d3416c20-8e09-4aa8-af7a-88ce14a79ad6">
 

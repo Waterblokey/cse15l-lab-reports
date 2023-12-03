@@ -37,7 +37,11 @@ After:
 
 9. Commit and push the resulting change to your Github account (you can pick any commit message!)
     
-`<ctrl> r g i t <space> c o <enter> g i t p u s h <enter>` `git clone` was higher in the history than `git commit` so I needed to type out `git co` to find it. I then git pushed manually, finishing the assignment.
+`<ctrl> r g i t <space> a <enter> <ctrl> r g i t <space> c o <enter> g i t p u s h <enter>` `git clone` was higher in the history than `git commit` so I needed to type out `git co` to find it. I then git pushed manually, finishing the assignment.
+
+<img width="354" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/322490e1-8a18-4cb8-9249-9f05887199cf">
+
 
 <img width="293" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/b77ee98d-3b96-4676-b732-cf930e1c77c9">
+
 <img width="192" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/c95b3763-3afe-425f-905a-c5e132f80509">

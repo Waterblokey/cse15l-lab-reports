@@ -1,45 +1,33 @@
-# Lab 4
+## Part 1 – Debugging Scenario
+Design a debugging scenario, and write your report as a conversation on EdStem. It should have:
 
-## Steps
-4. Log into ieng6
+The original post from a student with a screenshot showing a symptom and a description of a guess at the bug/some sense of what the failure-inducing input is. (Don’t actually make the post! Just write the content that would go in such a post)
+A response from a TA asking a leading question or suggesting a command to try (To be clear, you are mimicking a TA here.)
+Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is.
+At the end, all the information needed about the setup including:
+The file & directory structure needed
+The contents of each file before fixing the bug
+The full command line (or lines) you ran to trigger the bug
+A description of what to edit to fix the bug
+You should actually set up and run the scenario from your screenshots. It should involve at least a Java file and a bash script. Describing the bug should involve reading some output at the terminal resulting from running one or more commands. Design an error that produces more interesting output than a single message about a syntax or unbound identifier error – showcase some interesting wrong behavior! Feel free to set this up by cloning and breaking some existing code like the grading script or code from class, or by designing something of your own from scratch, etc.
 
-<img width="303" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/d9da77e2-e03c-4630-9dd1-715f4c37ea29">
+`Student: Help! my code is running like this. I double checked my code and I do not understand why the indices are off. I am incrementing all the correct indices at the right times. What might be wrong?`
 
-`ssh cs15lfa23ij@ieng6.ucsd.edu` was stored in the previous command, so I only needed to do `<up> <enter> `
+<img width="448" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/c0f92f5a-d2b2-41c8-91e3-7ca3b033e7dd">
 
-5. Clone your fork of the repository from your Github account (using the SSH URL)
-<img width="286" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/c1a60b90-4341-4c2b-b16d-3bba43654544">
+`TA: Have you checked all of the index variables, and the conditions that decide whether you should increment or not?`
 
-`git clone git@github.com:Waterblokey/lab7.git` was the first command that came up when searching for g, so I only needed to do `<ctrl> r g <enter>`
+`Student: Thank you! It turns out I was using || when I should have been using && in my conditional, causing my program to over index.`
 
+<img width="423" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/8a6a5dfc-970e-4884-a32d-f1b847232e31">
 
-<img width="454" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/2ad8111a-ad1e-49d1-8803-0b38705932fc">
+Part 2 – Reflection
+In a couple of sentences, describe something you learned from your lab experience in the second half of this quarter that you didn’t know before. It could be a technical topic we addressed specifically, something cool you found out on your own building on labs, something you learned from a tutor or classmate, and so on. It doesn’t have to be specifically related to a lab writeup, we just want to hear about cool things you learned!
 
-6. Run the tests, demonstrating that they fail
-<img width="221" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/d3416c20-8e09-4aa8-af7a-88ce14a79ad6">
+`One cool and useful thing I learned in the second half of the quarter is how to use an ssh key to easily commit changes to GitHub. By doing this, I don't have to sign into github everytime I want to push a change, which is super useful`
 
-`c d <space> l <tab> <enter> b a s h t <tab> <enter>` By pressing tab, I could automatically complete all of `lab7/` and `test.sh`
-
-7. Edit the code file to fix the failing test
-<img width="254" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/d9ed0f65-253b-4aed-82d6-9abe8fafd495">
-
-Before:
-<img width="258" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/84fcbf5e-e974-4d43-8f15-5134ace89e56">
-
-After:
-<img width="260" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/b0e8ba53-739c-42c2-8c2e-4451a1c6507c">
-
-
-`vim <space> <shift> L <tab> . <tab> <enter> 43 j e r 2 <shift> : w q <enter>` By doing `<shift> L`, I could auto fill `ListExamples` with tab, then by pressing `.` and `<tab>` again, I could add `.java`. `43 j` jumps down 43 lines to line 44, then `e` will go to the end of the first word, which was `index1`, `r` replaces that character, and `2` changes it from 1 to 2. I then did `<shift> : w q <enter>` to save my edits and exit.
-
-8. Run the tests, demonstrating that they now succeed
-<img width="217" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/081aa626-e063-479e-9d63-287622eb9e7c">
-
-`bash t <tab> <enter>` I again use `<tab>` to autofill `test.sh`
-
-9. Commit and push the resulting change to your Github account (you can pick any commit message!)
-    
-`<ctrl> r g i t <space> a <enter> <ctrl> r g i t <space> c o <enter> g i t p u s h <enter>` `git clone` was higher in the history than `git commit` so I needed to type out `git co` to find it. I then git pushed manually, finishing the assignment. Same with git add.
+A Note on Grading at the End of the Quarter
+We will try, but there might not be a resubmission window for lab report 5, so do your best to be thorough, creative, and clear in your submission.
 
 <img width="354" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/322490e1-8a18-4cb8-9249-9f05887199cf">
 

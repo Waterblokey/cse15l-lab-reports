@@ -15,6 +15,9 @@ You should actually set up and run the scenario from your screenshots. It should
 
 <img width="448" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/c0f92f5a-d2b2-41c8-91e3-7ca3b033e7dd">
 
+<img width="563" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/b917b705-9df4-4120-8c53-37376ff9ae22">
+
+
 `TA: Have you checked all of the index variables, and the conditions that decide whether you should increment or not?`
 
 `Student: Thank you! It turns out I was using || when I should have been using && in my conditional, causing my program to over index.`

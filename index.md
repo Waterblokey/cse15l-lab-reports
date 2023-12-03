@@ -21,6 +21,13 @@
 7. Edit the code file to fix the failing test
 <img width="254" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/d9ed0f65-253b-4aed-82d6-9abe8fafd495">
 
+Before:
+<img width="258" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/84fcbf5e-e974-4d43-8f15-5134ace89e56">
+
+After:
+<img width="260" alt="image" src="https://github.com/Waterblokey/cse15l-lab-reports/assets/118576768/b0e8ba53-739c-42c2-8c2e-4451a1c6507c">
+
+
 `vim <space> <shift> L <tab> . <tab> <enter> 43 j e r 2 <shift> : w q <enter>` By doing `<shift> L`, I could auto fill `ListExamples` with tab, then by pressing `.` and `<tab>` again, I could add `.java`. `43 j` jumps down 43 lines to line 44, then `e` will go to the end of the first word, which was `index1`, `r` replaces that character, and `2` changes it from 1 to 2. I then did `<shift> : w q <enter>` to save my edits and exit.
 
 8. Run the tests, demonstrating that they now succeed
